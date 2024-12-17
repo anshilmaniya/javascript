@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        #side-bar {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+            color: white;
+           
+        }
+
+        #action {
+            padding-left: 70px;
+        }
+
+        button {
+            height: 30px;
+            width: 100px;
+        }
+
+        body {
+            display: flex;
+        }
+
+        .side-bar-1 {
+            height: 200px;
+            width: 100%;
+            display: flex;
+            align-content: space-around;
+            justify-content: space-around;
+            align-items: center;
+            flex-direction: column;
+        }
+        a{
+            color: white;
+            text-decoration: none;
+        }
+    </style>
+
+    <div id="side-bar">
+        <a href="#" onclick="action()" id="action">❌</a>
+        <div class="side-bar-1">
+            <a href="#">About</a>
+            <a href="#">context us</a>
+            <a href="#">email</a>
+            <a href="#">sevices</a>
+        </div>
+    </div>
+    <div id="click-here">
+        <button onclick="clicking()">click</button>
+    </div>
+    <script>
+        function clicking() {
+            document.getElementById("side-bar").style.width = "150px"
+            document.getElementById("click-here").style.marginLeft = "20px"
+
+        }
+        function action() {
+            document.getElementById("side-bar").style.width = "0"
+            document.getElementById("click-here").style.marginLeft = "0"
+
+        }
+    </script>
+</body>
+
+</html>

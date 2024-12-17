@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        #calculater {
+            height: 247px;
+            width: 322px;
+            background-color: aquamarine;
+        }
+
+        input {
+            height: 20px;
+            width: 250px;
+        }
+
+        button {
+            height: 40px;
+            width: 60px;
+            font-size: 15px;
+        }
+
+        #number-one {
+            height: 40px;
+            width: 83px;
+            margin-top: 5px;
+
+        }
+    </style>
+    <div id="calculater">
+        <div id="display">
+            <input type="text" id="input-one">
+            <input type="text" id="input-two">
+            <button value="c" onclick="removed('c')">c</button>
+        </div>
+        <div id="number">
+            <button value="1" id="number-one" onclick="clicked(1)">1</button>
+            <button value="2" id="number-one" onclick="clicked(2)">2</button>
+            <button value="3" id="number-one" onclick="clicked(3)">3</button>
+            <button value="/" onclick="division('/')">/</button>
+            <button value="4" id="number-one" onclick="clicked(4)">4</button>
+            <button value="5" id="number-one" onclick="clicked(5)">5</button>
+            <button value="6" id="number-one" onclick="clicked(6)">6</button>
+            <button value="*" onclick="multification('*')">*</button>
+            <button value="7" id="number-one" onclick="clicked(7)" onclick="">7</button>
+            <button value="8" id="number-one" onclick="clicked(8)" onclick="">8</button>
+            <button value="9" id="number-one" onclick="clicked(9)" onclick="">9</button>
+            <button value="-" onclick="substracion('-')">-</button>
+            <button value="0" id="number-one" onclick="clicked(0)">0</button>
+            <button value="." id="number-one" onclick="clicked('.')">.</button>
+            <button value="=" id="number-one" onclick="total()">=</button>
+            <button value="+" onclick="addition('+')">+</button>
+        </div>
+    </div>
+</body>
+<script>
+    function clicked(val) {
+        document.getElementById("input-one").value += val;
+    }
+    function addition(val) {
+        document.getElementById("input-one").value += val;
+    }
+    function division(val) {
+        document.getElementById("input-one").value += val;
+    }
+    function multification(val) {
+        document.getElementById("input-one").value += val;
+    }
+    function substracion(val) {
+        document.getElementById("input-one").value += val;
+    }
+    function total() {
+
+        var target = document.getElementById("input-one").value;
+        if (target == null || target == "") {
+            alert("pls enter value")
+        }
+        else {
+            let y = eval(`${target}`);
+            var taregt2 = document.getElementById("input-two").value = y;
+            console.log(y);
+        }
+    }
+    function removed() {
+        var target = document.getElementById("input-one").value = ""
+        document.getElementById("input-two").value = target
+    }
+
+</script>
+
+</html>

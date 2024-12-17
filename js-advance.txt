@@ -1,0 +1,31 @@
+
+**variable**
+var-->redeclar reassign bane kri sakiye
+
+let--> redeclar nahi kar sakte but reassign kri sakavi.
+let x="hello"
+let x="world" (redeclar)
+x="wow"(reassign)
+
+const-->redeclar nahi kar sakte and reassign pan no kri sakavi.
+
+**templet string**
+var user ="yahoo baba";
+var green=`hello ${user
+(`)-->backquote sign
+
+**arrow function**
+let hello = () => console.log("its a typical");
+() -->sort form of function
+=> -->sign of arrow
+
+**oop**
+methods
+
+constructor
+prototype
+ststic
+
+
+
+todomvc

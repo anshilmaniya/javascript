@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            width: 60%;
+            /* border: 1px solid black; */
+        }
+
+
+        th {
+            padding: 10px;
+            border: 1px solid black;
+        }
+
+        td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+
+
+<body>
+
+    <select name="" id="dropdoenid" onclick="dropdofun()">
+        <option value="all" id="alling">all</option>
+    </select>
+    <button onclick="carting()">cart</button>
+    <button onclick="allvalue()">allvalue</button>
+    <!-- <p id="paregarph"></p> -->
+
+    <table>
+        <thead>
+
+            <th>id</th>
+            <th>title</th>
+            <th>price</th>
+            <th>model</th>
+            <th>category</th>
+            <th>image</th>
+            <th>display</th>
+        </thead>
+        <tbody id="printing">
+
+        </tbody>
+        <tbody id="paregarph">
+
+        </tbody>
+    </table>
+    <script src="apipractice.js"></script>
+</body>
+
+</html>

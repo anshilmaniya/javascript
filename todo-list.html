@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>todo-list</title>
+    <div class="todo">
+        <h3>todo-containt</h3>
+        <div> <input type="text" placeholder="type something" id="todoinput">
+            <button onclick="adding()">add</button>
+            <button onclick="deleting()">delete</button>
+            <input type="checkbox" placeholder="type something" onclick="checkeall(this)">
+        </div>
+        <table>
+            <thead>
+                <th>inputvalue</th>
+                <th>checkbox</th>
+                <th>action</th>
+                <th>edit</th>
+            </thead>
+            <tbody id="tododiv">
+            </tbody>
+        </table>
+    </div>
+</head>
+
+<body>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+        }
+
+        .todo {
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        table tr td {
+            border: 1px solid black;
+            cursor: pointer;
+
+        }
+
+        tr th {
+            border: 1px solid black;
+
+        }
+    </style>
+    <script>
+
+        var alldata = [];
+        function adding() {
+            var trying = document.getElementById("todoinput").value
+            if (trying === null || trying === "") {
+                alert("pls enter value")
+            }
+            else {
+                alldata.push({ trying })
+                console.log(trying);
+                alldata1();
+            }
+        }
+        function alldata1() {
+            document.getElementById("tododiv").innerHTML = alldata.map((item, index) => {
+                document.getElementById("todoinput").value = ""
+                return `<tr>
+                <td id=${`todotext-${index}`}>${item.trying}</td>
+                <td><input type="checkbox" id=${`checkbox${index}`}></td>
+                <td onclick="handlling(${index})">❌ </td>
+                <td><button onclick="edittig(${index})">edit</td>
+                </tr>`
+            }).join("")
+        }
+        function deleting() {
+            const fillvalue = alldata.filter((item, index) => {
+                var checkboxvalue = document.getElementById(`checkbox${index}`)
+                console.log(checkboxvalue);
+                return checkboxvalue.checked === false;
+            })
+            alldata = fillvalue;
+            alldata1();
+            console.log(alldata, "alldata");
+            console.log(fillvalue, "fillvalue");
+
+        }
+        function handlling(index) {
+            console.log(index);
+            var trying = alldata.splice(index, 1);
+            console.log(trying);
+            alldata1();
+            console.log(alldata);
+        }
+
+
+        function edittig(index) {
+            var edittig = document.getElementById(`todotext-${index}`)
+            var currentText = alldata[index].trying
+            console.log(currentText);
+            edittig.innerHTML = `<input type="text" value="$xx{currentText}" id=${`editting${index}`}><button onclick="save(${index})">save</button>`
+        }
+        function save(index) {
+            var saving = document.getElementById(`editting${index}`).value;
+            console.log(saving);
+            alldata[index].trying = saving;
+            alldata1();
+        }
+        function checkeall(selectAll) {
+            alldata.filter((item, index) => {
+                document.getElementById(`checkbox${index}`).checked = selectAll.checked;
+            })
+        }
+        function removecheck() {
+            alldata.filter((item, index) => {
+                document.getElementById(`checkbox${index}`).checked = false;
+            })
+        }
+    </script>
+</body>
+
+</html>

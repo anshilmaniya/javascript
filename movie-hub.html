@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>movies-hub India-Watch TV Shows</title>
+    <link href="movie-hub.css" rel="stylesheet">
+    <link href="hub-logo.webp" rel="icon">
+
+</head>
+
+<body>
+    <div class="main-page">
+        <div class="page-1">
+            <div class="nav-bar">
+                <div class="nav-bar-1">
+                    <div class="movies-hub">
+                        <img src="movies_hub-removebg-preview.png" height="100%">
+                    </div>
+                    <div class="sign-in">
+                        <select>
+                            <option value="English">English</option>
+                            <option value="हिंदी">हिंदी </option>
+                        </select>
+                        <a href="movie-register.html" target="_blank"> sign in</a>
+                    </div>
+                </div>
+            </div>
+            <div class="unlimited-movie">
+                <div class="unlimited-movie-1">
+                    <div class="unlimited-movie-1-1">
+                        <h1> Unlimited movies, TV shows and more</h1>
+                        <h4 style="font-weight: 100;">Watch anywhere. Cancel anytime.</h4>
+                        <h4  style="font-weight: 100;">Ready to watch? Enter your email to create or restart your membership.
+                        </h4>
+                    </div>
+                    <div class="get-start">
+                        <input type="email" placeholder="Email address" id="input-value">
+                        <button class="start" id="start" onclick="adding()">Get started</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="page-2">
+            <div class="page-2-1">
+                <div class="enjoy-tv-2">
+                    <img src="tv.png" height="100%" width="100%" class="img-2">
+                    <div class="enjoy-tv-2-1">
+                        <video height="100%" width="100%" autoplay loop muted>
+                            <source
+                                src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-tv-in-0819.m4v"
+                                type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+                <div class="enjoy-tv-1">
+                    <div class="enjoy-tv-1-1">
+                        <h1 class="enjoy-tv-1-3">Enjoy on your TV</h1>
+                        <div class="enjoy-tv-1-2">
+                            <h5>Watch on smart TVs, PlayStation, Xbox,</h5>
+                            <h5>Chromecast, Apple TV, Blu-ray players and</h5>
+                            <h5>more.</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="page-3">
+            <div class="page-2-1">
+                <div class="enjoy-tv-2">
+                    <img src="mobile-0819.jpg" height="100%" width="100%" class="img-2">
+                </div>
+                <div class="enjoy-tv-1">
+                    <div class="enjoy-tv-1-1">
+                        <h1 class="enjoy-tv-1-3">Download your</h1>
+                        <h1 class="enjoy-tv-1-3">shows to watch</h1>
+                        <div class="enjoy-tv-1-2">
+                            <h5>Watch on smart TVs, PlayStation, Xbox,</h5>
+                            <h5>Chromecast, Apple TV, Blu-ray players and</h5>
+                            <h5>more.</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="page-4">
+            <div class="page-2-1">
+                <div class="enjoy-tv-2">
+                    <img src="device-pile-in.png" class="img-2" height="100%" width="100%">
+                    <div class="enjoy-tv-3-1">
+                        <video width="280px" autoplay loop muted>
+                            <source
+                                src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-devices-in.m4v"
+                                type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+                <div class="enjoy-tv-1">
+                    <div class="enjoy-tv-1-1">
+                        <h1 class="enjoy-tv-1-3">Watch everywhere</h1>
+                        <div class="enjoy-tv-1-2">
+                            <h5>Stream unlimited movies and TV shows on</h5>
+                            <h5>your phone, tablet, laptop, and TV.</h5>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="page-5">
+            <div class="page-2-1">
+                <div class="enjoy-tv-2">
+                    <img src="AAAABVr8nYuAg0xDpXDv0VI9HUoH7r2aGp4TKRCsKNQrMwxzTtr-NlwOHeS8bCI2oeZddmu3nMYr3j9MjYhHyjBASb1FaOGYZNYvPBCL.png"
+                        height="100%" width="100%" class="img-2">
+
+                </div>
+                <div class="enjoy-tv-1">
+                    <div class="enjoy-tv-1-1">
+                        <h1 class="enjoy-tv-1-3">Create profiles for kids</h1>
+                        <div class="enjoy-tv-1-2">
+                            <h5>Watch on smart TVs, PlayStation, Xbox,</h5>
+                            <h5>Chromecast, Apple TV, Blu-ray players and</h5>
+                            <h5>more.</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="page-6">
+            <div class="Frequently">
+                <h1>Frequently Asked Questions</h1>
+                <div class="Frequently-1">
+                    <div class="Frequently-1-1" onclick="opennav()">
+                        <h3>what is movies-hub?</h3>
+                        <img src="addition.png" alt="addition" height="30px" onclick="opennav()" id="additionsign">
+                    </div>
+                    <div class="Frequently-2" id="Frequently-2" onclick="remove()" style="cursor: pointer;">
+                        <h2>Netflix is a streaming service that offers a wide variety of award
+                            winning TV shows, movies, anime, documentaries and more on thousands of internet-connected
+                            devices.</h2>
+                    </div>
+                </div>
+
+                <div class="Frequently-1">
+                    <div class="Frequently-1-1" onclick="opennav3()">
+                        <h3>how match movies-hub cost?</h3>
+                        <img src="addition.png" alt="addition" style="float: right; cursor: pointer;" height="30px"
+                            onclick="opennav3()" id="additionsign-3">
+                    </div>
+                    <div class="Frequently-2" id="Frequently-3" onclick="remove3()" style="cursor: pointer;">
+
+                        <h2>Watch Netflix on your smartphone, tablet, Smart TV, laptop, or
+                            streaming device, all for one fixed monthly fee. Plans range from ₹149 to ₹649 a month. No
+                            extra costs, no contracts.</h2>
+                    </div>
+                </div>
+                <div class="Frequently-1">
+                    <div class="Frequently-1-1" onclick="opennav4()">
+                        <h3>where can I watch?</h3>
+                        <img src="addition.png" alt="addition" height="30px" onclick="opennav4()" id="additionsign-4">
+                    </div>
+                    <div class="Frequently-2" id="Frequently-4" onclick="remove4()" style="cursor: pointer;">
+                        <h2>Watch anywhere, anytime. Sign in with your Netflix account to watch
+                            instantly on the web at netflix.com from your personal computer or on any internet-connected
+                            device that offers the Netflix app, including smart TVs, smartphones, tablets, streaming
+                            media players and game consoles.</h2>
+                    </div>
+                </div>
+                <div class="Frequently-1">
+                    <div class="Frequently-1-1" onclick="opennav5()">
+                        <h3>where can I cancle?</h3>
+                        <img src="addition.png" alt="addition" height="30px" onclick="opennav5()" id="additionsign-5">
+                    </div>
+                    <div class="Frequently-2" id="Frequently-5" onclick="remove5()" style="cursor: pointer;">
+                        <h2>Watch anywhere, anytime. Sign in with your Netflix account to watch
+                            instantly on the web at netflix.com from your personal computer or on any internet-connected
+                            device that offers the Netflix app, including smart TVs, smartphones, tablets, streaming
+                            media players and game consoles.</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="page-7">
+            <div class="Questions">
+                <div class="Questions-1">
+                    <h5 class="Questions-1-1">Questions? Call <a href="#">000-800-919-1694</a></h5>
+                </div>
+                <div class="Questions-2">
+                    <div class="Questions-2-1">
+                        <h5 class="Questions-1-1"> <a href="">FAQ</a></h5>
+                        <h5 class="Questions-1-1"><a href="">Investor Relations</a></h5>
+                        <h5 class="Questions-1-1"><a href="">Privacy</a></h5>
+                        <h5 class="Questions-1-1"><a href="">Speed Test</a></h5>
+                    </div>
+                    <div class="Questions-2-1">
+                        <h5 class="Questions-1-1"><a href="help-center.html">
+                                Help Centre</a></h5>
+                        <h5 class="Questions-1-1"><a href="#">Jobs</a></h5>
+                        <h5 class="Questions-1-1"><a href="#">Cookie Preferences</a></h5>
+                        <h5 class="Questions-1-1"><a href="#">Legal Notices</a></h5>
+                    </div>
+                    <div class="Questions-2-1">
+                        <h5 class="Questions-1-1"><a href="#">
+                                Account</a></h5>
+                        <h5 class="Questions-1-1"><a href="#">
+                                Ways to Watch</a></h5>
+                        <h5 class="Questions-1-1"><a href="#">
+                                Corporate Information</a></h5>
+                        <h5 class="Questions-1-1"><a href="#">
+                                Only on Netflix</a></h5>
+                    </div>
+                    <div class="Questions-2-1">
+                        <h5 class="Questions-1-1"><a href="#">
+                                Media Centre</a></h5>
+                        <h5 class="Questions-1-1"><a href="#">Terms of Use</a></h5>
+                        <h5 class="Questions-1-1"><a href="contect.html">
+                                Contact Us</a></h5>
+                        <h5 class="Questions-1-1"><a href="#">
+                                Us</a></h5>
+
+                    </div>
+                </div>
+                <div class="Questions-3">
+                    <select>
+                        <option value="English">English</option>
+                        <option value="English">हिंदी </option>
+                    </select>
+                    <h5 class="Questions-1-1"> movies-hub India</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="movie-hub.js"></script>
+
+</body>
+
+</html>

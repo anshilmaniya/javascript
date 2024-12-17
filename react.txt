@@ -1,0 +1,10 @@
+**bebal-web site**->for conveting into js
+
+
+jsx:stands for javascript xml.it allow to write html elements in js
+componets:in react componets is essentilly a javascript function or class that return(jsx(java script xml))
+		  there are two ways to create componets:class based
+												 function based
+		-componets first word is capital.
+
+react fragments:in react.js a componets cant return multiple elements withouts a wrapper div

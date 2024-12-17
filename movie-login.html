@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>movies-hub Login</title>
+    <link href="hub-logo.webp" rel="icon">
+    <link href="movie-login.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="main-page">
+        <div class="nav-bar">
+            <div class="nav-bar-1">
+                <!-- <img src="movies_hub-removebg-preview.png" height="180px"> -->
+            </div>
+        </div>
+        <div class="login-page">
+            <div class="login-page-1">
+                <div class="sign">
+                    <div class="sign-1">
+                        <h2>Sign In</h2>
+                    </div>
+                    <div>
+                        <div class="input" id="inputon">
+                            <div class="input-email">
+                                <input type="email" id="input-email" class="input-value" placeholder="Enter Email"
+                                    oninput="inputvalue()" required>
+                                <div id="erroring" style="color: red;">
+                                </div>
+                                <div class="input-1">
+                                    <input type="password" id="input-password" class="input-value"
+                                        placeholder="Enter password" required>
+                                    <input type="checkbox" class="input-checkbox" onclick="toggle()">
+                                </div>
+                                <div id="erroring-1" style="color:red;"></div>
+
+                                <div class="sign-button">
+                                    <button id="sign-in" type="submit" onclick="submited()">submit</button>
+                                    <h3 class="OR">OR</h3>
+                                    <h3 class="OR" style="cursor: pointer;">Forget password?</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="movie-hub.js">
+
+        </script>
+</body>
+
+</html>

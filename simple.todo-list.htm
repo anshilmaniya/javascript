@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="todo-container">
+        <h2>To-Do List</h2>
+        <div id="todo-container-1">
+            <input type="text" id="todoinput" placeholder="Enter a to-do" value="">
+            <button onclick="inputvalue()">Add</button>
+            <button onclick="deleteSelected()">Delete Selected</button>
+            <table>
+                <thead>
+                    <!-- <th>Select</th>
+                    <th>inputvalue</th>
+                    <th>Action</th> -->
+                </thead>
+                <tbody id="tododiv"></tbody>
+            </table>
+        </div>
+    </div>
+
+    <style>
+        table {
+            border: 1px solid black;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+        }
+
+        table thead th {
+            padding: 5px 10px;
+            border: 1px solid black;
+        }
+
+        table tbody tr td {
+            padding: 5px 10px;
+        }
+
+        table tr td {
+            border: 1px solid black;
+            width: 100px;
+            text-align: center;
+        }
+
+        #mycheckbox:hover {
+            cursor: pointer;
+        }
+    </style>
+
+    <script>
+        "use strict";
+        var Alldata = [];
+
+        function PrintArray(Alldata) {
+            const tododiv = document.getElementById("tododiv");
+            tododiv.innerHTML = "";
+
+            Alldata.forEach((item, index) => {
+                var table = document.createElement("table");
+                const tableRow = document.createElement("tr");
+                const tableData = document.createElement("td");
+                const tableData2 = document.createElement("td");
+                const tableData3 = document.createElement("td");
+                const tableData4 = document.createElement("td");
+
+                const input = document.createElement("input");
+                input.type = "checkbox";
+                input.setAttribute("data-index", index); // Use data attribute for index
+                tableData2.appendChild(input);
+
+                tableData.textContent = item.todoinput;
+                tableData.setAttribute("id", `todo-text-${index}`);
+                console.log(tableData);
+
+                var editButton = document.createElement("button");
+                editButton.textContent = "edit";
+                editButton.setAttribute("onclick", `editting(${index})`);
+                tableData3.appendChild(editButton);
+
+                var deleteButton = document.createElement("button");
+                deleteButton.textContent = "❌";
+                deleteButton.addEventListener("click", function () {
+                    const index = Alldata.indexOf(item);
+                    if (index > -1) {
+                        Alldata.splice(index, 1);
+                        PrintArray(Alldata);
+                    }
+                });
+
+                tableData4.appendChild(deleteButton);
+
+                tableRow.appendChild(tableData);
+                tableRow.appendChild(tableData2);
+                tableRow.appendChild(tableData3);
+                tableRow.appendChild(tableData4);
+
+                table.appendChild(tableRow);
+                tododiv.appendChild(table);
+            });
+        }
+
+        function deleteSelected() {
+            var checkboxes = document.querySelectorAll(`input[type="checkbox"]`);
+            Alldata = Alldata.filter((item, index) => {
+                const checkbox = checkboxes[index];
+                return checkbox.checked === false;
+            });
+            PrintArray(Alldata);
+        }
+
+        function editting(index) {
+            const todoTextElement = document.getElementById(`todo-text-${index}`);
+            console.log(todoTextElement);
+
+            const currentText = todoTextElement.textContent;
+            console.log(currentText);
+
+            const inputBox = document.createElement("input");
+            inputBox.type = "text";
+            inputBox.value = currentText;
+            console.log(inputBox);
+
+            const saveButton = document.createElement("button");
+            saveButton.textContent = "Save";
+            saveButton.setAttribute("onclick", `saveEdit(${index})`);
+
+            todoTextElement.innerHTML = "";
+            todoTextElement.appendChild(inputBox);
+            todoTextElement.appendChild(saveButton);
+        }
+
+        function saveEdit(index) {
+            const todoTextElement = document.getElementById(`todo-text-${index}`);
+            const inputBox = todoTextElement.querySelector("input");
+            const newText = inputBox.value;
+            console.log(todoTextElement);
+
+            Alldata[index].todoinput = newText;
+            PrintArray(Alldata);
+        }
+
+        function inputvalue() {
+            var todoinput = document.getElementById("todoinput").value;
+            if (todoinput === null || todoinput === "") {
+                alert("Please enter a to-do");
+            } else {
+                Alldata.push({ todoinput });
+                document.getElementById("tododiv").innerHTML = '';
+                document.getElementById("todoinput").value = '';
+                PrintArray(Alldata);
+            }
+        }
+    </script>
+</body>
+
+</html>

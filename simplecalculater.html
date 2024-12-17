@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="number" class="try">
+    <input type="number" class="uuu">
+    <p class="result"></p>
+    <div class="sasa">
+        <button class="add" onclick="addition()">+</button>
+        <button onclick="substriction()">-</button>
+        <button onclick="equals()">=</button>
+    </div>
+    <script>
+
+        let inputbox1 = document.querySelector(".try");
+        let inputbox2 = document.querySelector(".uuu");
+
+        let total;
+        function answer() {
+            let n1 = Number(inputbox1.value);
+            let n2 = Number(inputbox2.value);
+            total = n1 + n2;
+            document.querySelector(".result").textContent= total;
+        }
+        function addition() {
+            let n1 = Number(inputbox1.value);
+            let n2 = Number(inputbox2.value);   
+            total = n1 + n2;
+        }
+        function equals(){
+            document.querySelector(".result").textContent= total;
+        }
+        function substriction() {
+            let n1 = Number(inputbox1.value);
+            let n2 = Number(inputbox2.value);
+            total = n1 - n2;
+
+        }
+    </script>
+</body>
+
+</html>

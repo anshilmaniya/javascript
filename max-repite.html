@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<input type="text" id="input-vlaue">
+<button onclick="maxrepite()">click</button>
+<p id="paregraph"></p>
+
+<body>
+  <script>
+
+
+
+
+    function maxrepite(item) {
+      var item = document.getElementById("input-vlaue").value;
+      console.log(item);
+      let removedSpacesText = item.split(" ").join("");
+      console.log(removedSpacesText);
+      let ans;
+      let mch = new Map();
+      console.log(mch);
+      let a = 0;
+      let n = removedSpacesText.length;
+      console.log(n);
+
+      for (let i = 0; i < n; i++) {
+        mch.set(removedSpacesText[i], (mch.get(removedSpacesText[i]) || 0) + 1);
+        if (a < mch.get(removedSpacesText[i])) {
+          ans = removedSpacesText[i];
+          a = mch.get(removedSpacesText[i]);
+        }
+      }
+      document.getElementById("paregraph").innerHTML = ans
+      console.log(ans);
+    }
+
+
+
+
+  </script>
+</body>
+
+</html>

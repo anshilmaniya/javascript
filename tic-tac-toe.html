@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="tic-tac-toe.js"></script>
+
+    <style>
+        .boxes {
+            height: 186px;
+            width: 81px;
+            text-align: center;
+        }
+
+        input {
+            text-align: center;
+            /* justify-content: center; */
+            /* align-items: center; */
+            cursor: pointer;
+            height: 57px;
+            width: 70px;
+            font-size: 40px;
+            user-select: none;
+        }
+
+        input:active {
+            outline: none;
+        }
+
+
+        .main {
+            height: 185px;
+            width: 230px;
+            /* background-color: aquamarine; */
+            display: flex;
+        }
+
+        #reset {
+            width: 44px;
+            height: 20px;
+            /* justify-content: center; */
+            text-align: center;
+            margin-top: 20px;
+            cursor: pointer;
+            /* align-items: center; */
+
+        }
+
+        /* button {
+            width: 100px;
+        } */
+        p{
+            margin-bottom: -10px;
+        }
+        #tic-tac {
+            height: 100px;
+            width: 345px;
+            /* background-color: antiquewhite; */
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="tic-tac">
+        <h2>Game start to click in box</h2>
+        <select onclick="selecting(this)">
+            <option value="X">select-X</option>
+            <option value="0">select-0</option>
+        </select>
+    </div>
+    <div class="main">
+        <div class="boxes">
+            <input type="text" id="b1" onclick="myfun1();myfun10()" >
+            <input type="text" id="b2" onclick="myfun2();myfun10()" >
+            <input type="text" id="b3" onclick="myfun3();myfun10()" >
+        </div>
+        <div class="boxes">
+            <input type="text" id="b4" onclick="myfun4();myfun10()" >
+            <input type="text" id="b5" onclick="myfun5();myfun10()" >
+            <input type="text" id="b6" onclick="myfun6();myfun10()" >
+        </div>
+        <div class="boxes">
+            <input type="text" id="b7" onclick="myfun7();myfun10()" >
+            <input type="text" id="b8" onclick="myfun8();myfun10()" >
+            <input type="text" id="b9" onclick="myfun9();myfun10()" >
+        </div>
+    </div>
+    <div class="re">
+        <button id="reset" onclick="resert()">reset</button>
+        <p id="result"></p>
+    </div>
+</body>
+
+</html>
